@@ -1,0 +1,75 @@
+# AI Reel Editor
+
+AI-powered video editing platform for automatically generating short-form reel content from long YouTube streams and VODs.
+
+## Project Goal
+
+Convert long-form content into engaging vertical short videos automatically using:
+
+- AI transcription
+- Scene detection
+- Highlight extraction
+- Smart cropping
+- Auto subtitles
+- Reel rendering pipeline
+
+---
+
+# Current Stack
+
+## Backend
+- Python 3.12
+- FastAPI
+- Docker
+- Redis
+- PostgreSQL
+
+## Video Processing
+- FFmpeg
+- yt-dlp
+- Whisper (planned)
+
+---
+
+# Current Infrastructure
+
+Project runs inside Docker containers for clean dependency management and production scalability.
+
+## Services
+
+### API Container
+- Python backend service
+- FastAPI application runtime
+
+### Redis
+- Queue/cache service
+- Future background job processing
+
+### PostgreSQL
+- Metadata and job storage
+
+---
+
+# Current Folder Structure
+
+```text
+video-editor.duckdns.org/
+│
+├── backend/
+│   ├── app/
+│   ├── api/
+│   ├── pipelines/
+│   ├── services/
+│   └── workers/
+│
+├── storage/
+│   ├── raw/
+│   ├── audio/
+│   ├── clips/
+│   ├── final/
+│   └── temp/
+│
+├── docker/
+├── logs/
+├── docker-compose.yml
+└── .gitignore
