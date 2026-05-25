@@ -1,4 +1,4 @@
-# AI Reel Editor
+# AI Video Editor
 
 AI-powered video editing platform for automatically generating short-form reel content from long YouTube streams and VODs.
 
