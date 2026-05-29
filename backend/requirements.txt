@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+yt-dlp
+ffmpeg-python
+openai-whisper
+sqlalchemy
+psycopg2-binary
+redis
+dramatiq
+python-multipart
+pydantic

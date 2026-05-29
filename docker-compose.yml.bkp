@@ -1,18 +1,12 @@
 services:
 
   api:
-    #image: python:3.12-slim
-    build:
-      context: ./backend
-    
+    image: python:3.12-slim
     container_name: reel-api
 
     working_dir: /app
 
-    #command: tail -f /dev/null
-    
-    environment:
-      PYTHONUNBUFFERED: 1
+    command: tail -f /dev/null
 
     volumes:
       - ./backend:/app
@@ -22,7 +16,7 @@ services:
     ports:
       - "127.0.0.1:8000:8000"
 
-    restart: unless-stopped  
+    restart: unless-stopped
 
     depends_on:
       - redis
